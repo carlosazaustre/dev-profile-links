@@ -24,9 +24,10 @@ export default function Home() {
       </Head>
       <Container justify="center" align="center">
         <Avatar
-          src="https://avatars.githubusercontent.com/u/650752?s=400&u=cf2941a8c0b894129bfeda9aee630caa616a9e19&v=4"
+          src="/assets/carlos-azaustre.png"
           css={{ my: 15, size: 120 }}
           color="primary"
+          alt="Carlos Azaustre - Aprende Programación Web y JavaScript"
         />
 
         <Text h6 size={16} color="primary">
@@ -45,7 +46,7 @@ export default function Home() {
         </Text>
 
         <Spacer y={1} />
-        <Card css={{ mw: "360px" }}>
+        <Card clickable hoverable css={{ mw: "360px" }}>
           <UILink color="primary" href="https://twitch.tv/carlosazaustre">
             <ImTwitch />
             <Spacer x={1} />
@@ -54,7 +55,7 @@ export default function Home() {
         </Card>
 
         <Spacer y={1} />
-        <Card css={{ mw: "360px" }}>
+        <Card clickable hoverable css={{ mw: "360px" }}>
           <UILink color="primary" href="https://carlosazaustre.es/discord">
             <SiDiscord />
             <Spacer x={1} />
@@ -67,31 +68,31 @@ export default function Home() {
 
         <Row justify="center">
           <UILink color="primary" href="https://twitter.com/carlosazaustre">
-            <Card>
+            <Card clickable hoverable>
               <ImTwitter />
             </Card>
           </UILink>
           <Spacer x={1} />
           <UILink color="primary" href="https://instagram.com/carlosazaustre">
-            <Card>
+            <Card clickable hoverable>
               <SiInstagram />
             </Card>
           </UILink>
           <Spacer x={1} />
           <UILink color="primary" href="https://tiktok.com/@carlosazaustre">
-            <Card>
+            <Card clickable hoverable>
               <SiTiktok />
             </Card>
           </UILink>
           <Spacer x={1} />
           <UILink color="primary" href="https://github.com/carlosazaustre">
-            <Card>
+            <Card clickable hoverable>
               <ImGithub />
             </Card>
           </UILink>
           <Spacer x={1} />
           <UILink color="primary" href="https://linkedin.com/in/carlosazaustre">
-            <Card>
+            <Card clickable hoverable>
               <ImLinkedin />
             </Card>
           </UILink>
@@ -115,7 +116,14 @@ export default function Home() {
               </Text>
             </Col>
           </Card.Header>
-          <Card.Body css={{ p: 0 }}>TODO Foto Libro</Card.Body>
+          <Card.Body css={{ p: 0 }}>
+            <Card.Image
+              objectFit="cover"
+              width="100%"
+              height={220}
+              src="/assets/libro-aprendiendo-javascript.jpg"
+            />
+          </Card.Body>
           <Divider />
           <Card.Footer>
             <UILink
@@ -129,25 +137,29 @@ export default function Home() {
         </Card>
 
         <Spacer y={1} />
-        <Card bordered hoverable shadow css={{ my: 15, mw: "360px" }}>
-          <Card.Header>
-            <Col>
-              <Text
-                size={12}
-                weight="bold"
-                transform="uppercase"
-                color="#9E9E9E"
-                align="left"
-              >
-                Mi Setup
-              </Text>
-              <Text h3 color="white" align="left">
-                Mi espacio de trabajo
-              </Text>
-            </Col>
-          </Card.Header>
-          <Card.Body css={{ p: 0 }}>TODO Foto Setup</Card.Body>
-        </Card>
+        <a href="https://carlosazaustre.es/workspace">
+          <Card bordered hoverable shadow css={{ my: 15, mw: "360px" }}>
+            <Card.Header>
+              <Col>
+                <Text
+                  size={12}
+                  weight="bold"
+                  transform="uppercase"
+                  color="#9E9E9E"
+                  align="left"
+                >
+                  Mi Setup
+                </Text>
+                <Text h3 color="white" align="left">
+                  Mi espacio de trabajo
+                </Text>
+              </Col>
+            </Card.Header>
+            <Card.Body css={{ p: 0 }}>
+              <Card.Image src="/assets/setup_2022.jpg" />
+            </Card.Body>
+          </Card>
+        </a>
       </Container>
     </div>
   );
