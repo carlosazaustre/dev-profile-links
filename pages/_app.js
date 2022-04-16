@@ -5,8 +5,9 @@ function MyApp({ Component, pageProps }) {
     type: "dark",
     theme: {
       colors: {
-        primary: "#f0d500",
+        primary: "#f5a623",
         link: "#af4abd",
+        twitchColor: "#9146ff",
       },
       fonts: {
         sans: "Lato",
