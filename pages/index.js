@@ -120,7 +120,7 @@ export default function Home() {
             <Card.Image
               objectFit="cover"
               width="100%"
-              height={220}
+              height={320}
               src="/assets/libro-aprendiendo-javascript.jpg"
             />
           </Card.Body>
