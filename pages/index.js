@@ -207,7 +207,7 @@ export default function Home() {
               </Text>
               <Spacer y={1} />
               <Button auto rounded css={{ bg: "#222" }}>
-                <UILink href="//carlosazaustre.es/cursos/javascript">
+                <UILink href="//carlosazaustre.es/cursos/programacion-javascript">
                   <Text
                     color="primary"
                     size={12}
