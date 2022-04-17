@@ -16,6 +16,10 @@ import {
 import { ImTwitch, ImGithub, ImTwitter, ImLinkedin } from "react-icons/im";
 import { SiDiscord, SiTiktok, SiInstagram } from "react-icons/si";
 import { YouTubePlayer } from "../components/YouTubePlayer";
+
+const ENV =
+  process.env.NODE_ENV !== "production" ? "localhost" : "cazaustre.dev";
+
 export default function Home() {
   return (
     <div>
@@ -65,7 +69,7 @@ export default function Home() {
           subtitle="Sigue mis directos en Twitch"
         >
           <iframe
-            src="https://player.twitch.tv/?channel=carlosazaustre&parent=localhost"
+            src={`https://player.twitch.tv/?channel=carlosazaustre&parent=${ENV}`}
             frameBorder="0"
             allowFullScreen="true"
             scrolling="no"
