@@ -1,4 +1,12 @@
-import { Card, Text, Col, Divider, Link as UILink } from "@nextui-org/react";
+import {
+  Button,
+  Card,
+  Text,
+  Col,
+  Divider,
+  Row,
+  Link as UILink,
+} from "@nextui-org/react";
 
 export function YouTubePlayer({ videoID, title }) {
   return (
@@ -25,19 +33,35 @@ export function YouTubePlayer({ videoID, title }) {
           frameBorder="0"
           allowFullScreen="false"
           scrolling="no"
-          height="190"
-          width="360"
+          height="200"
+          width="356"
         ></iframe>
       </Card.Body>
       <Divider />
-      <Card.Footer>
-        <UILink
-          color="primary"
-          target="_blank"
-          href="https://youtube.com/carlosazaustre?sub_confirmation=1"
-        >
-          Sucríbete al canal
-        </UILink>
+      <Card.Footer
+        blur
+        css={{
+          position: "absolute",
+          bgBlur: "#0f1114",
+          borderTop: "$borderWeights$light solid $gray700",
+          bottom: 0,
+          zIndex: 1,
+        }}
+      >
+        <Row justify="flex-end">
+          <Button flat auto rounded css={{ bg: "#111" }}>
+            <UILink href="//carlosazaustre.es/libros/aprendiendo-javascript">
+              <Text
+                color="primary"
+                size={12}
+                transform="uppercase"
+                weight="bold"
+              >
+                Suscríbete al canal
+              </Text>
+            </UILink>
+          </Button>
+        </Row>
       </Card.Footer>
     </Card>
   );

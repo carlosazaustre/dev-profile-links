@@ -125,14 +125,33 @@ export default function Home() {
             />
           </Card.Body>
           <Divider />
-          <Card.Footer>
-            <UILink
-              color="primary"
-              target="_blank"
-              href="https://carlosazaustre.es/libros/aprendiendo-javascript"
-            >
-              A la venta en Amazon (Digital y en Papel)
-            </UILink>
+          <Card.Footer
+            blur
+            css={{
+              position: "absolute",
+              bgBlur: "#000001",
+              bottom: 0,
+              zIndex: 1,
+              borderTop: "$borderWeights$light solid $gray700",
+            }}
+          >
+            <Row justify="center">
+              <Text size="xs" color="white" align="left">
+                A la venta en Amazon (Versiones Digital y en Papel)
+              </Text>
+              <Button flat auto rounded css={{ bg: "#111" }}>
+                <UILink href="//carlosazaustre.es/libros/aprendiendo-javascript">
+                  <Text
+                    color="primary"
+                    size={12}
+                    transform="uppercase"
+                    weight="bold"
+                  >
+                    Comprar Libro
+                  </Text>
+                </UILink>
+              </Button>
+            </Row>
           </Card.Footer>
         </Card>
 
@@ -160,7 +179,14 @@ export default function Home() {
             </Card.Body>
           </Card>
         </a>
+        <Spacer y={1} />
+        <Text size="xs" color="white">
+          <UILink color="primary" href="//carlosazaustre.es">
+            carlosazaustre.es
+          </UILink>
+        </Text>
       </Container>
+      <Spacer y={1} />
     </div>
   );
 }
