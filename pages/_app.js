@@ -6,6 +6,7 @@ function MyApp({ Component, pageProps }) {
     theme: {
       colors: {
         primary: "#ffc400",
+        secondary: "#1976D2",
       },
       fonts: {
         sans: "Lato",

@@ -10,7 +10,7 @@ import {
 
 export function YouTubePlayer({ videoID, title }) {
   return (
-    <Card bordered hoverable shadow css={{ my: 15, mw: "360px" }}>
+    <Card bordered hoverable shadow css={{ mw: "360px" }}>
       <Card.Header>
         <Col>
           <Text
