@@ -1,44 +1,27 @@
-import { Card, Col, Text, Collapse } from "@nextui-org/react";
+import { Spacer, Collapse } from "@nextui-org/react";
 
-const parent =
+const ENV =
   process.env.NODE_ENV !== "production" ? "localhost" : "cazaustre.dev";
 
 export function TwitchPlayer({ channelID }) {
   return (
-    <Card
-      bordered
-      hoverable
-      clickable
-      shadow
-      color="twitch"
-      css={{ my: 15, mw: "360px" }}
-    >
-      <Card.Header>
-        <Col>
-          <Text
-            size={12}
-            align="left"
-            weight="bold"
-            transform="uppercase"
-            color="#9E9E9E"
-          >
-            Twitch
-          </Text>
-          <Text h3 color="white" align="left">
-            Sigue mis directos en Twitch
-          </Text>
-        </Col>
-      </Card.Header>
-      <Card.Body>
+    <>
+      <Spacer y={1} />
+      <Collapse
+        css={{ mw: "360px" }}
+        shadow
+        title="En Directo"
+        subtitle="Sigue mis directos en Twitch"
+      >
         <iframe
-          src={`https://player.twitch.tv/?channel=${channelID}&parent=${parent}`}
+          src={`https://player.twitch.tv/?channel=carlosazaustre&parent=${ENV}`}
           frameBorder="0"
-          allowFullScreen="false"
+          allowFullScreen="true"
           scrolling="no"
-          height="180"
-          width="320"
+          height="200"
+          width="356"
         ></iframe>
-      </Card.Body>
-    </Card>
+      </Collapse>
+    </>
   );
 }

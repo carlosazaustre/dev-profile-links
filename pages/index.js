@@ -15,12 +15,21 @@ import {
 } from "@nextui-org/react";
 import { ImTwitch, ImGithub, ImTwitter, ImLinkedin } from "react-icons/im";
 import { SiDiscord, SiTiktok, SiInstagram } from "react-icons/si";
+import { SocialLinks } from "../components/SocialLinks";
+import { TwitchPlayer } from "../components/TwitchPlayer";
 import { YouTubePlayer } from "../components/YouTubePlayer";
 import { CardInfo } from "../components/CardInfo";
 import { ImageProfile } from "../components/ImageProfile";
 
 const ENV =
   process.env.NODE_ENV !== "production" ? "localhost" : "cazaustre.dev";
+const links = [
+  { name: "twitter", url: "https://twitter.com/carlosazaustre" },
+  { name: "instagram", url: "https://instagram.com/carlosazaustre" },
+  { name: "tiktok", url: "https://tiktok.com/carlosazaustre" },
+  { name: "github", url: "https://github.com/carlosazaustre" },
+  { name: "linkedin", url: "https://linkedin.com/in/carlosazaustre" },
+];
 
 export default function Home() {
   return (
@@ -50,58 +59,12 @@ export default function Home() {
           </UILink>
         </Card>
 
-        <Spacer y={1} />
-        <Collapse
-          css={{ mw: "360px" }}
-          shadow
-          title="En Directo"
-          subtitle="Sigue mis directos en Twitch"
-        >
-          <iframe
-            src={`https://player.twitch.tv/?channel=carlosazaustre&parent=${ENV}`}
-            frameBorder="0"
-            allowFullScreen="true"
-            scrolling="no"
-            height="200"
-            width="356"
-          ></iframe>
-        </Collapse>
+        <TwitchPlayer />
 
         <Spacer y={1} />
         <YouTubePlayer videoID="afDXVnDnBf4" title="Cómo usar REACT ROUTER" />
 
-        <Spacer y={1} />
-        <Row justify="center">
-          <UILink color="primary" href="https://twitter.com/carlosazaustre">
-            <Card clickable hoverable>
-              <ImTwitter />
-            </Card>
-          </UILink>
-          <Spacer x={1} />
-          <UILink color="primary" href="https://instagram.com/carlosazaustre">
-            <Card clickable hoverable>
-              <SiInstagram />
-            </Card>
-          </UILink>
-          <Spacer x={1} />
-          <UILink color="primary" href="https://tiktok.com/@carlosazaustre">
-            <Card clickable hoverable>
-              <SiTiktok />
-            </Card>
-          </UILink>
-          <Spacer x={1} />
-          <UILink color="primary" href="https://github.com/carlosazaustre">
-            <Card clickable hoverable>
-              <ImGithub />
-            </Card>
-          </UILink>
-          <Spacer x={1} />
-          <UILink color="primary" href="https://linkedin.com/in/carlosazaustre">
-            <Card clickable hoverable>
-              <ImLinkedin />
-            </Card>
-          </UILink>
-        </Row>
+        <SocialLinks links={links} />
 
         <Spacer y={1} />
         <Collapse.Group shadow css={{ mw: "350px" }}>
