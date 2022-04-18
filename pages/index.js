@@ -2,24 +2,17 @@ import Head from "next/head";
 import {
   Container,
   Spacer,
-  Grid,
-  Collapse,
-  Row,
-  Col,
   Card,
-  Avatar,
   Text,
-  Button,
-  Divider,
   Link as UILink,
 } from "@nextui-org/react";
-import { ImTwitch, ImGithub, ImTwitter, ImLinkedin } from "react-icons/im";
-import { SiDiscord, SiTiktok, SiInstagram } from "react-icons/si";
+import { SiDiscord } from "react-icons/si";
 import { SocialLinks } from "../components/SocialLinks";
 import { TwitchPlayer } from "../components/TwitchPlayer";
 import { YouTubePlayer } from "../components/YouTubePlayer";
 import { CardInfo } from "../components/CardInfo";
 import { ImageProfile } from "../components/ImageProfile";
+import { Courses } from "../components/Courses";
 
 const ENV =
   process.env.NODE_ENV !== "production" ? "localhost" : "cazaustre.dev";
@@ -29,6 +22,35 @@ const links = [
   { name: "tiktok", url: "https://tiktok.com/carlosazaustre" },
   { name: "github", url: "https://github.com/carlosazaustre" },
   { name: "linkedin", url: "https://linkedin.com/in/carlosazaustre" },
+];
+const courseList = [
+  {
+    title: "Curso de React.js",
+    subtitle: "Curso Gratis en YouTube",
+    image: "/assets/logo-react.png",
+    accent: "secondary",
+    link: "//carlosazaustre.es/cursos/reactjs-gratis",
+    summary:
+      "Entiende la librería más demandada de JavaScript, React.js. Curso práctico y gratuito en video dónde aprenderás a crear una aplicación web con React desde cero.",
+  },
+  {
+    title: "Curso de Node.js",
+    subtitle: "Curso Gratis en YouTube",
+    image: "/assets/logo-nodejs.png",
+    accent: "success",
+    link: "//carlosazaustre.es/cursos/nodejs-gratis",
+    summary:
+      "Utiliza JavaScript en el lado del servidor con Node.js. Aprende a crear un API REST desde cero para utilizarlo en tus proyectos. 20 videos con horas de contenido sobre Express y MongoDB.",
+  },
+  {
+    title: "Curso de JavaScript",
+    subtitle: "Curso Gratis en YouTube",
+    image: "/assets/logo-js.jpg",
+    accent: "warning",
+    link: "//carlosazaustre.es/cursos/programacion-javascript",
+    summary:
+      "Aprende el lenguaje de programación fundamental del desarrollo web. Uno de los pilares del Frontend junto a HTML y CSS. Curso gratuito en Youtube con más de 2horas de contenido.",
+  },
 ];
 
 export default function Home() {
@@ -66,114 +88,7 @@ export default function Home() {
 
         <SocialLinks links={links} />
 
-        <Spacer y={1} />
-        <Collapse.Group shadow css={{ mw: "350px" }}>
-          <Collapse
-            title={<Text h4>Curso de React.js</Text>}
-            subtitle="Curso Gratis en YouTube"
-            contentLeft={
-              <Avatar
-                size="lg"
-                src="/assets/logo-react.png"
-                color="secondary"
-                bordered
-                squared
-              />
-            }
-          >
-            <Col>
-              <Text align="left">
-                Entiende la librería más demandada de JavaScript, React.js.
-                Curso práctico y gratuito en video dónde aprenderás a crear una
-                aplicación web con React desde cero.
-              </Text>
-              <Spacer y={1} />
-              <Button auto rounded css={{ bg: "#222" }}>
-                <UILink href="//carlosazaustre.es/cursos/reactjs-gratis">
-                  <Text
-                    color="primary"
-                    size={12}
-                    transform="uppercase"
-                    weight="bold"
-                  >
-                    Ir al curso
-                  </Text>
-                </UILink>
-              </Button>
-              <Spacer y={1} />
-            </Col>
-          </Collapse>
-          <Collapse
-            title={<Text h4>Curso de Node.js</Text>}
-            subtitle="Curso Gratis en YouTube"
-            contentLeft={
-              <Avatar
-                size="lg"
-                src="/assets/logo-nodejs.png"
-                color="success"
-                bordered
-                squared
-              />
-            }
-          >
-            <Col>
-              <Text align="left">
-                Utiliza JavaScript en el lado del servidor con Node.js. Aprende
-                a crear un API REST desde cero para utilizarlo en tus proyectos.
-                20 videos con horas de contenido sobre Express y MongoDB.
-              </Text>
-              <Spacer y={1} />
-              <Button auto rounded css={{ bg: "#222" }}>
-                <UILink href="//carlosazaustre.es/cursos/nodejs-gratis">
-                  <Text
-                    color="primary"
-                    size={12}
-                    transform="uppercase"
-                    weight="bold"
-                  >
-                    Ir al curso
-                  </Text>
-                </UILink>
-              </Button>
-              <Spacer y={1} />
-            </Col>
-          </Collapse>
-          <Collapse
-            title={<Text h4>Curso de JavaScript</Text>}
-            subtitle="Curso Gratis en YouTube"
-            contentLeft={
-              <Avatar
-                size="lg"
-                src="/assets/logo-js.jpg"
-                color="primary"
-                bordered
-                squared
-              />
-            }
-          >
-            <Col>
-              <Text align="left">
-                Aprende el lenguaje de programación fundamental del desarrollo
-                web. Uno de los pilares del Frontend junto a HTML y CSS. Curso
-                gratuito en Youtube con más de 2horas de contenido.
-              </Text>
-              <Spacer y={1} />
-              <Button auto rounded css={{ bg: "#222" }}>
-                <UILink href="//carlosazaustre.es/cursos/programacion-javascript">
-                  <Text
-                    color="primary"
-                    size={12}
-                    transform="uppercase"
-                    weight="bold"
-                  >
-                    Ir al curso
-                  </Text>
-                </UILink>
-              </Button>
-              <Spacer y={1} />
-            </Col>
-          </Collapse>
-        </Collapse.Group>
+        <Courses courses={courseList} />
 
         <CardInfo
           title="Consigue mi libro"
