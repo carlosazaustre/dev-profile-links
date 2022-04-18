@@ -17,6 +17,7 @@ import { ImTwitch, ImGithub, ImTwitter, ImLinkedin } from "react-icons/im";
 import { SiDiscord, SiTiktok, SiInstagram } from "react-icons/si";
 import { YouTubePlayer } from "../components/YouTubePlayer";
 import { CardInfo } from "../components/CardInfo";
+import { ImageProfile } from "../components/ImageProfile";
 
 const ENV =
   process.env.NODE_ENV !== "production" ? "localhost" : "cazaustre.dev";
@@ -29,29 +30,16 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Container justify="center" align="center">
-        <Avatar
-          squared
-          bordered
-          src="/assets/carlos-azaustre.png"
-          css={{ my: 15, size: 120 }}
-          color="primary"
-          alt="Carlos Azaustre - Aprende Programación Web y JavaScript"
-        />
-
-        <Text h6 size={16} color="primary">
-          @carlosazaustre
-        </Text>
-
-        <Text h1 size={35}>
-          Carlos Azaustre
-        </Text>
-
-        <Text size={16}>
-          Google Developer Expert (GDE) en Tecnologías Web
+        <ImageProfile
+          fullName="Carlos Azaustre"
+          username="@carlosazaustre"
+          bio={`Google Developer Expert (GDE) en Tecnologías Web
           <br />
           Ingeniero de Software y creador de contenido sobre Programación Web y
-          JavaScript
-        </Text>
+          JavaScript`}
+          image="/assets/carlos-azaustre.png"
+          alt="Carlos Azaustre - Aprende Programación Web y JavaScript"
+        />
 
         <Spacer y={1} />
         <Card clickable hoverable css={{ mw: "360px" }}>
