@@ -16,6 +16,7 @@ import {
 import { ImTwitch, ImGithub, ImTwitter, ImLinkedin } from "react-icons/im";
 import { SiDiscord, SiTiktok, SiInstagram } from "react-icons/si";
 import { YouTubePlayer } from "../components/YouTubePlayer";
+import { CardInfo } from "../components/CardInfo";
 
 const ENV =
   process.env.NODE_ENV !== "production" ? "localhost" : "cazaustre.dev";
@@ -223,87 +224,22 @@ export default function Home() {
           </Collapse>
         </Collapse.Group>
 
-        <Spacer y={1} />
-        <Card bordered hoverable shadow css={{ my: 15, mw: "360px" }}>
-          <Card.Header>
-            <Col>
-              <Text
-                size={12}
-                weight="bold"
-                transform="uppercase"
-                color="#9E9E9E"
-                align="left"
-              >
-                Consigue mi libro
-              </Text>
-              <Text h3 color="white" align="left">
-                Aprendiendo JavaScript
-              </Text>
-            </Col>
-          </Card.Header>
-          <Card.Body css={{ p: 0 }}>
-            <Card.Image
-              objectFit="cover"
-              width="100%"
-              height={320}
-              src="/assets/libro-aprendiendo-javascript.jpg"
-            />
-          </Card.Body>
-          <Divider />
-          <Card.Footer
-            blur
-            css={{
-              position: "absolute",
-              bgBlur: "#000001",
-              bottom: 0,
-              zIndex: 1,
-              borderTop: "$borderWeights$light solid $gray700",
-            }}
-          >
-            <Row justify="center">
-              <Text size="xs" color="white" align="left">
-                A la venta en Amazon (Versiones Digital y en Papel)
-              </Text>
-              <Button flat auto rounded css={{ bg: "#111" }}>
-                <UILink href="//carlosazaustre.es/libros/aprendiendo-javascript">
-                  <Text
-                    color="primary"
-                    size={12}
-                    transform="uppercase"
-                    weight="bold"
-                  >
-                    Comprar Libro
-                  </Text>
-                </UILink>
-              </Button>
-            </Row>
-          </Card.Footer>
-        </Card>
+        <CardInfo
+          title="Consigue mi libro"
+          subtitle="Aprendiendo JavaScript"
+          image="/assets/libro-aprendiendo-javascript.jpg"
+          url="//carlosazaustre.es/libro-aprendiendo-javascript"
+          bottomText="A la venta en Amazon (Versiones Digital y en Papel)"
+          bottomCTA="Comprar libro"
+        />
 
-        <Spacer y={1} />
-        <a href="https://carlosazaustre.es/workspace">
-          <Card bordered hoverable shadow css={{ my: 15, mw: "360px" }}>
-            <Card.Header>
-              <Col>
-                <Text
-                  size={12}
-                  weight="bold"
-                  transform="uppercase"
-                  color="#9E9E9E"
-                  align="left"
-                >
-                  Mi Setup
-                </Text>
-                <Text h3 color="white" align="left">
-                  Mi espacio de trabajo
-                </Text>
-              </Col>
-            </Card.Header>
-            <Card.Body css={{ p: 0 }}>
-              <Card.Image src="/assets/setup_2022.jpg" />
-            </Card.Body>
-          </Card>
-        </a>
+        <CardInfo
+          title="Mi Setup"
+          subtitle="Mi espacio de trabajo"
+          image="/assets/setup_2022.jpg"
+          url="//carlosazaustre.es/workspace"
+        />
+
         <Spacer y={1} />
         <Text size="xs" color="white">
           <UILink color="primary" href="//carlosazaustre.es">
