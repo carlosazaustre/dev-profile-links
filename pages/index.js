@@ -1,18 +1,13 @@
 import Head from "next/head";
-import {
-  Container,
-  Spacer,
-  Card,
-  Text,
-  Link as UILink,
-} from "@nextui-org/react";
-import { SiDiscord } from "react-icons/si";
+import { Container, Spacer, Text, Link as UILink } from "@nextui-org/react";
+
 import { SocialLinks } from "../components/SocialLinks";
 import { TwitchPlayer } from "../components/TwitchPlayer";
 import { YouTubePlayer } from "../components/YouTubePlayer";
 import { CardInfo } from "../components/CardInfo";
 import { ImageProfile } from "../components/ImageProfile";
 import { Courses } from "../components/Courses";
+import { LinkButton } from "../components/LinkButton";
 
 const ENV =
   process.env.NODE_ENV !== "production" ? "localhost" : "cazaustre.dev";
@@ -72,18 +67,14 @@ export default function Home() {
           alt="Carlos Azaustre - Aprende Programación Web y JavaScript"
         />
 
-        <Spacer y={1} />
-        <Card clickable hoverable css={{ mw: "360px" }}>
-          <UILink color="primary" href="https://carlosazaustre.es/discord">
-            <SiDiscord />
-            <Spacer x={1} />
-            Únete a la Comunidad de Discord
-          </UILink>
-        </Card>
-
         <TwitchPlayer />
 
-        <Spacer y={1} />
+        <LinkButton
+          link="//carlosazaustre.es/discord"
+          network="discord"
+          text="Únete a la Comunidad en Discord"
+        />
+
         <YouTubePlayer videoID="afDXVnDnBf4" title="Cómo usar REACT ROUTER" />
 
         <SocialLinks links={links} />

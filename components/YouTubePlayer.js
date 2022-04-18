@@ -1,5 +1,6 @@
 import {
   Button,
+  Spacer,
   Card,
   Text,
   Col,
@@ -10,59 +11,63 @@ import {
 
 export function YouTubePlayer({ videoID, title }) {
   return (
-    <Card bordered hoverable shadow css={{ mw: "360px" }}>
-      <Card.Header>
-        <Col>
-          <Text
-            size={12}
-            weight="bold"
-            transform="uppercase"
-            color="#9E9E9E"
-            align="left"
-          >
-            Video más reciente en YouTube
-          </Text>
-          <Text h3 color="white" align="left">
-            {title}
-          </Text>
-        </Col>
-      </Card.Header>
-      <Card.Body css={{ p: 0 }}>
-        <iframe
-          src={`https://www.youtube.com/embed/${videoID}`}
-          frameBorder="0"
-          allowFullScreen="false"
-          scrolling="no"
-          height="200"
-          width="356"
-        ></iframe>
-      </Card.Body>
-      <Divider />
-      <Card.Footer
-        blur
-        css={{
-          position: "absolute",
-          bgBlur: "#0f1114",
-          borderTop: "$borderWeights$light solid $gray700",
-          bottom: 0,
-          zIndex: 1,
-        }}
-      >
-        <Row justify="flex-end">
-          <Button flat auto rounded css={{ bg: "#111" }}>
-            <UILink href="//carlosazaustre.es/libros/aprendiendo-javascript">
-              <Text
-                color="primary"
-                size={12}
-                transform="uppercase"
-                weight="bold"
-              >
-                Suscríbete al canal
-              </Text>
-            </UILink>
-          </Button>
-        </Row>
-      </Card.Footer>
-    </Card>
+    <>
+      <Spacer y={1} />
+
+      <Card bordered hoverable shadow css={{ mw: "360px" }}>
+        <Card.Header>
+          <Col>
+            <Text
+              size={12}
+              weight="bold"
+              transform="uppercase"
+              color="#9E9E9E"
+              align="left"
+            >
+              Video más reciente en YouTube
+            </Text>
+            <Text h3 color="white" align="left">
+              {title}
+            </Text>
+          </Col>
+        </Card.Header>
+        <Card.Body css={{ p: 0 }}>
+          <iframe
+            src={`https://www.youtube.com/embed/${videoID}`}
+            frameBorder="0"
+            allowFullScreen="false"
+            scrolling="no"
+            height="200"
+            width="356"
+          ></iframe>
+        </Card.Body>
+        <Divider />
+        <Card.Footer
+          blur
+          css={{
+            position: "absolute",
+            bgBlur: "#0f1114",
+            borderTop: "$borderWeights$light solid $gray700",
+            bottom: 0,
+            zIndex: 1,
+          }}
+        >
+          <Row justify="flex-end">
+            <Button flat auto rounded css={{ bg: "#111" }}>
+              <UILink href="//carlosazaustre.es/libros/aprendiendo-javascript">
+                <Text
+                  color="primary"
+                  size={12}
+                  transform="uppercase"
+                  weight="bold"
+                >
+                  Suscríbete al canal
+                </Text>
+              </UILink>
+            </Button>
+          </Row>
+        </Card.Footer>
+      </Card>
+    </>
   );
 }
