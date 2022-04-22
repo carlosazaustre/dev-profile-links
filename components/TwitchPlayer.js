@@ -1,9 +1,8 @@
 import { Spacer, Collapse } from "@nextui-org/react";
 
-const ENV =
-  process.env.NODE_ENV !== "production" ? "localhost" : "cazaustre.dev";
+export function TwitchPlayer({ channelID, parentHost }) {
+  const ENV = process.env.NODE_ENV !== "production" ? "localhost" : parentHost;
 
-export function TwitchPlayer({ channelID }) {
   return (
     <>
       <Spacer y={1} />
@@ -14,7 +13,7 @@ export function TwitchPlayer({ channelID }) {
         subtitle="Sigue mis directos en Twitch"
       >
         <iframe
-          src={`https://player.twitch.tv/?channel=carlosazaustre&parent=${ENV}`}
+          src={`https://player.twitch.tv/?channel=${channelID}&parent=${ENV}`}
           frameBorder="0"
           allowFullScreen="true"
           scrolling="no"

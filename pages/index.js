@@ -67,28 +67,40 @@ export default function Home() {
           alt="Carlos Azaustre - Aprende Programación Web y JavaScript"
         />
 
-        <TwitchPlayer />
-
         <LinkButton
           link="//carlosazaustre.es/discord"
           network="discord"
           text="Únete a la Comunidad en Discord"
         />
 
-        <YouTubePlayer videoID="afDXVnDnBf4" title="Cómo usar REACT ROUTER" />
+        <LinkButton
+          link="//youtube.com/carlosazaustre?sub_confirmation=1"
+          network="youtube"
+          text="Tutoriales y Cursos Gratis"
+        />
+
+        <LinkButton
+          link="//twitch.tv/carlosazaustre"
+          network="twitch"
+          text="Livecoding en Directo"
+        />
 
         <SocialLinks links={links} />
-
-        <Courses courses={courseList} />
 
         <CardInfo
           title="Consigue mi libro"
           subtitle="Aprendiendo JavaScript"
           image="/assets/libro-aprendiendo-javascript.jpg"
-          url="//carlosazaustre.es/libro-aprendiendo-javascript"
+          url="//carlosazaustre.es/libros/aprendiendo-javascript"
           bottomText="A la venta en Amazon (Versiones Digital y en Papel)"
           bottomCTA="Comprar libro"
         />
+
+        <Courses courses={courseList} />
+
+        <YouTubePlayer videoID="EeO8iwyO_2M" title="Aprende Salesforce" />
+
+        <TwitchPlayer channelID="carlosazaustre" parentHost="cazaustre.dev" />
 
         <CardInfo
           title="Mi Setup"
