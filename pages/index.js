@@ -98,7 +98,7 @@ export default function Home() {
 
         <Courses courses={courseList} />
 
-        <YouTubePlayer videoID="EeO8iwyO_2M" title="Aprende Salesforce" />
+        <YouTubePlayer videoID="zBdojhZ2_Qg" title="Node.js Desde Cero" />
 
         <TwitchPlayer channelID="carlosazaustre" parentHost="cazaustre.dev" />
 
