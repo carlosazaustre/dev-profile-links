@@ -10,7 +10,7 @@ export function SocialLinks({ links }) {
         {links.map(({ name, url }) => (
           <Fragment key={name}>
             <UILink color="primary" href={url}>
-              <Card clickable hoverable>
+              <Card clickable hoverable css={{ bg: "#222" }}>
                 {social[name]()}
               </Card>
             </UILink>

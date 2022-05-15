@@ -21,7 +21,12 @@ export function CardInfo({
     <>
       <Spacer y={1} />
       <a href={url} target="_blank" rel="noreferrer">
-        <Card bordered hoverable shadow css={{ my: 15, mw: "360px" }}>
+        <Card
+          bordered
+          hoverable
+          shadow
+          css={{ my: 15, mw: "360px", bg: "#222" }}
+        >
           <Card.Header>
             <Col>
               <Text
@@ -33,7 +38,7 @@ export function CardInfo({
               >
                 {title}
               </Text>
-              <Text h3 color="white" align="left">
+              <Text h3 align="left" color="white">
                 {subtitle}
               </Text>
             </Col>

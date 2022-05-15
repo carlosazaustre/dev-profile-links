@@ -26,7 +26,7 @@ export function YouTubePlayer({ videoID, title }) {
             >
               Video más reciente en YouTube
             </Text>
-            <Text h3 color="white" align="left">
+            <Text h3 align="left">
               {title}
             </Text>
           </Col>

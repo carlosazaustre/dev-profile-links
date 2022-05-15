@@ -2,14 +2,14 @@ import { createTheme, NextUIProvider } from "@nextui-org/react";
 
 function MyApp({ Component, pageProps }) {
   const theme = createTheme({
-    type: "dark",
+    type: "light",
     theme: {
       colors: {
         primary: "#ffc400",
-        secondary: "#1976D2",
+        secondary: "#222222",
       },
       fonts: {
-        sans: "Lato",
+        sans: "Poppins",
       },
     },
   });

@@ -5,7 +5,7 @@ export function LinkButton({ link, network, text }) {
   return (
     <>
       <Spacer y={1} />
-      <Card clickable hoverable css={{ mw: "360px" }}>
+      <Card clickable hoverable css={{ mw: "360px", bg: "#222" }}>
         <UILink color="primary" href={link}>
           {social[network]()}
           <Spacer x={1} />
