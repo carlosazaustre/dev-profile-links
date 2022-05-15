@@ -15,7 +15,7 @@ export function YouTubePlayer({ videoID, title }) {
       <Spacer y={1} />
 
       <Card bordered hoverable shadow css={{ mw: "360px" }}>
-        <Card.Header>
+        <Card.Header css={{ bg: "#222" }}>
           <Col>
             <Text
               size={12}
@@ -26,7 +26,7 @@ export function YouTubePlayer({ videoID, title }) {
             >
               Video más reciente en YouTube
             </Text>
-            <Text h3 align="left">
+            <Text h3 align="left" color="white">
               {title}
             </Text>
           </Col>

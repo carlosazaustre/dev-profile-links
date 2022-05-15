@@ -4,7 +4,6 @@ export function ImageProfile({ image, alt }) {
   return (
     <>
       <Avatar
-        circle
         bordered
         src="/assets/carlos-azaustre.png"
         css={{ my: 15, size: 120 }}

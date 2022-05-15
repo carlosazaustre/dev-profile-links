@@ -12,14 +12,18 @@ export function Courses({ courses }) {
   return (
     <>
       <Spacer y={1} />
-      <Collapse.Group shadow css={{ mw: "350px" }}>
-        <Text h3 css={{ py: 10 }}>
+      <Collapse.Group shadow css={{ mw: "350px", bg: "#222" }}>
+        <Text h3 color="white" css={{ py: 10 }}>
           Aprende con mis cursos
         </Text>
         {courses.map((course, index) => (
           <Collapse
             key={course.title}
-            title={<Text h4>{course.title}</Text>}
+            title={
+              <Text h4 color="white">
+                {course.title}
+              </Text>
+            }
             subtitle={course.subtitle}
             contentLeft={
               <Avatar

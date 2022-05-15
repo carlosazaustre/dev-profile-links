@@ -2,12 +2,13 @@ import Head from "next/head";
 import { Container, Spacer, Text, Link as UILink } from "@nextui-org/react";
 
 import { SocialLinks } from "../components/SocialLinks";
-import { TwitchPlayer } from "../components/TwitchPlayer";
 import { YouTubePlayer } from "../components/YouTubePlayer";
 import { CardInfo } from "../components/CardInfo";
 import { ImageProfile } from "../components/ImageProfile";
 import { Courses } from "../components/Courses";
 import { LinkButton } from "../components/LinkButton";
+
+import latestVideos from "../data/latestVideos.json";
 
 const ENV =
   process.env.NODE_ENV !== "production" ? "localhost" : "cazaustre.dev";
@@ -49,6 +50,9 @@ const courseList = [
 ];
 
 export default function Home() {
+  const lastVideoId = latestVideos[0]?.snippet?.resourceId?.videoId;
+  const titleVideo = latestVideos[0]?.snippet?.title;
+
   return (
     <div>
       <Head>
@@ -98,9 +102,7 @@ export default function Home() {
 
         <Courses courses={courseList} />
 
-        <YouTubePlayer videoID="zWXnZPQtYWI" title="Aprende Salesforce" />
-
-        <TwitchPlayer channelID="carlosazaustre" parentHost="cazaustre.dev" />
+        <YouTubePlayer videoID={lastVideoId} title={titleVideo} />
 
         <CardInfo
           title="Mi Setup"
