@@ -22,7 +22,7 @@ class MyDocument extends Document {
             crossO6rigin
           />
           <link
-            href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600&display=swap"
             rel="stylesheet"
           ></link>
         </Head>
