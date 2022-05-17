@@ -92,6 +92,14 @@ export default function Home() {
         <SocialLinks links={links} />
 
         <CardInfo
+          title="Patrocinador"
+          subtitle="Recibe ofertas de empleo en remoto"
+          image="/assets/arc-logo.png"
+          url="https://m.arc.dev/carlosazaustre"
+          bottomCTA="Crea tu perfil aquí"
+        />
+
+        <CardInfo
           title="Consigue mi libro"
           subtitle="Aprendiendo JavaScript"
           image="/assets/libro-aprendiendo-javascript.jpg"
@@ -103,6 +111,14 @@ export default function Home() {
         <Courses courses={courseList} />
 
         <YouTubePlayer videoID={lastVideoId} title={titleVideo} />
+
+        <CardInfo
+          title="Patrocinador"
+          subtitle="Trabaja en remoto para empresas de USA"
+          image="/assets/turing-logo.png"
+          url="//carlosazaustre.es/turing/tiktok"
+          bottomCTA="Regístrate aquí"
+        />
 
         <CardInfo
           title="Mi Setup"
