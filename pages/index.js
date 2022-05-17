@@ -22,7 +22,7 @@ const links = [
 const courseList = [
   {
     title: "Curso de React.js",
-    subtitle: "Curso Gratis en YouTube",
+    subtitle: "Curso en YouTube",
     image: "/assets/logo-react.png",
     accent: "secondary",
     link: "//carlosazaustre.es/cursos/reactjs-gratis",
@@ -31,7 +31,7 @@ const courseList = [
   },
   {
     title: "Curso de Node.js",
-    subtitle: "Curso Gratis en YouTube",
+    subtitle: "Curso en YouTube",
     image: "/assets/logo-nodejs.png",
     accent: "success",
     link: "//carlosazaustre.es/cursos/nodejs-gratis",
@@ -40,7 +40,7 @@ const courseList = [
   },
   {
     title: "Curso de JavaScript",
-    subtitle: "Curso Gratis en YouTube",
+    subtitle: "Curso en YouTube",
     image: "/assets/logo-js.jpg",
     accent: "warning",
     link: "//carlosazaustre.es/cursos/programacion-javascript",

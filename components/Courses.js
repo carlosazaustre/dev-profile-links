@@ -14,7 +14,7 @@ export function Courses({ courses }) {
       <Spacer y={1} />
       <Collapse.Group shadow css={{ mw: "350px", bg: "#222" }}>
         <Text h3 color="white" css={{ py: 10 }}>
-          Aprende con mis cursos
+          Aprende con mis cursos GRATIS
         </Text>
         {courses.map((course, index) => (
           <Collapse
@@ -36,12 +36,14 @@ export function Courses({ courses }) {
             }
           >
             <Col>
-              <Text align="left">{course.summary}</Text>
+              <Text color="white" align="left">
+                {course.summary}
+              </Text>
               <Spacer y={1} />
-              <Button auto rounded css={{ bg: "#222" }}>
+              <Button auto rounded bg="primary">
                 <UILink href={course.link}>
                   <Text
-                    color="primary"
+                    color="black"
                     size={12}
                     transform="uppercase"
                     weight="bold"
