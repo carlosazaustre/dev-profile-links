@@ -93,10 +93,10 @@ export default function Home() {
 
         <CardInfo
           title="Patrocinador"
-          subtitle="Recibe ofertas de empleo en remoto"
-          image="/assets/arc-logo.png"
-          url="https://arc.dev/developer-blog/what-remote-developers-earning-100k-do-differently/?utm_source=influencer&utm_medium=social-TikTok&utm_campaign=paid2022&utm_term=202206&utm_content=Carlos-Azaustre"
-          bottomCTA="Crea tu perfil aquí"
+          subtitle="Trabaja en remoto para empresas de USA"
+          image="/assets/turing-logo.png"
+          url="//carlosazaustre.es/turing/tiktok"
+          bottomCTA="Regístrate aquí"
         />
 
         <CardInfo
@@ -114,10 +114,10 @@ export default function Home() {
 
         <CardInfo
           title="Patrocinador"
-          subtitle="Trabaja en remoto para empresas de USA"
-          image="/assets/turing-logo.png"
-          url="//carlosazaustre.es/turing/tiktok"
-          bottomCTA="Regístrate aquí"
+          subtitle="Recibe ofertas de empleo en remoto"
+          image="/assets/arc-logo.png"
+          url="https://arc.dev/developer-blog/what-remote-developers-earning-100k-do-differently/?utm_source=influencer&utm_medium=social-TikTok&utm_campaign=paid2022&utm_term=202206&utm_content=Carlos-Azaustre"
+          bottomCTA="Crea tu perfil aquí"
         />
 
         <CardInfo
