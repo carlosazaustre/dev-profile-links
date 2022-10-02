@@ -63,7 +63,7 @@ export default function Home() {
         <ImageProfile
           fullName="Carlos Azaustre"
           username="@carlosazaustre"
-          bio={`Google Developer Expert (GDE) en Tecnologías Web
+          bio={`Google Developer Expert (GDE) en Tecnologías Web. Microsoft MVP 2022.
           <br />
           Ingeniero de Software y creador de contenido sobre Programación Web y
           JavaScript`}
@@ -72,7 +72,7 @@ export default function Home() {
         />
 
         <LinkButton
-          link="//carlosazaustre.es/discord"
+          link="//discord.gg/carlosazaustre"
           network="discord"
           text="Únete a la Comunidad en Discord"
         />
@@ -91,13 +91,9 @@ export default function Home() {
 
         <SocialLinks links={links} />
 
-        <CardInfo
-          title="Patrocinador"
-          subtitle="Trabaja en remoto para empresas de USA"
-          image="/assets/turing-logo.png"
-          url="//carlosazaustre.es/turing/tiktok"
-          bottomCTA="Regístrate aquí"
-        />
+        <YouTubePlayer videoID={lastVideoId} title={titleVideo} />
+
+        <Courses courses={courseList} />
 
         <CardInfo
           title="Consigue mi libro"
@@ -106,18 +102,6 @@ export default function Home() {
           url="//carlosazaustre.es/libros/aprendiendo-javascript"
           bottomText="A la venta en Amazon (Versiones Digital y en Papel)"
           bottomCTA="Comprar libro"
-        />
-
-        <Courses courses={courseList} />
-
-        <YouTubePlayer videoID={lastVideoId} title={titleVideo} />
-
-        <CardInfo
-          title="Patrocinador"
-          subtitle="Recibe ofertas de empleo en remoto"
-          image="/assets/arc-logo.png"
-          url="https://arc.dev/developer-blog/what-remote-developers-earning-100k-do-differently/?utm_source=influencer&utm_medium=social-TikTok&utm_campaign=paid2022&utm_term=202206&utm_content=Carlos-Azaustre"
-          bottomCTA="Crea tu perfil aquí"
         />
 
         <CardInfo
