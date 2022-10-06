@@ -20,6 +20,7 @@ jobs:
       - run: |
           git config user.name ${{ secrets.GIT_USER_NAME }}
           git config user.email ${{ secrets.GIT_USER_EMAIL }}
-          git add data/latestVideos.json
+          git pull origin main
+          git add ./data/latestVideos.json
           git diff --quiet && git diff --staged --quiet || git commit -m "[:robot: BOT] Update latestVideos.json"
-          git push origin main
+          git push -u origin main
