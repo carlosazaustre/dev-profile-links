@@ -6,7 +6,7 @@ export function SocialLinks({ links }) {
   return (
     <>
       <Spacer y={1} />
-      <Row justify="center">
+      <Row justify="space-between"  css={{ mw: "360px" }}>
         {links.map(({ name, url }) => (
           <Fragment key={name}>
             <UILink color="primary" href={url}>
@@ -14,7 +14,6 @@ export function SocialLinks({ links }) {
                 {social[name]()}
               </Card>
             </UILink>
-            <Spacer x={1} />
           </Fragment>
         ))}
       </Row>
