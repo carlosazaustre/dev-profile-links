@@ -63,7 +63,9 @@ export default function Home() {
         <ImageProfile
           fullName="Carlos Azaustre"
           username="@carlosazaustre"
-          bio={`Google Developer Expert (GDE) en Tecnologías Web. Microsoft MVP 2022.
+          bio={`Google Developer Expert (GDE) en Tecnologías Web.
+          <br />
+          Microsoft MVP 2022.
           <br />
           Ingeniero de Software y creador de contenido sobre Programación Web y
           JavaScript`}
