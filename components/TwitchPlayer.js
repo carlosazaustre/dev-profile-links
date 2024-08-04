@@ -1,5 +1,7 @@
 import { Spacer, Collapse } from "@nextui-org/react";
 
+import { theme } from '../utils/consts'
+
 export function TwitchPlayer({ channelID, parentHost }) {
   const ENV = process.env.NODE_ENV !== "production" ? "localhost" : parentHost;
 
@@ -7,7 +9,7 @@ export function TwitchPlayer({ channelID, parentHost }) {
     <>
       <Spacer y={1} />
       <Collapse
-        css={{ mw: "360px" }}
+        css={{ mw: theme.mw }}
         shadow
         title="En Directo"
         subtitle="Sigue mis directos en Twitch"
@@ -17,8 +19,8 @@ export function TwitchPlayer({ channelID, parentHost }) {
           frameBorder="0"
           allowFullScreen="true"
           scrolling="no"
-          height="200"
-          width="356"
+          height={theme.videoHeight}
+          width={theme.videoWidth}
         ></iframe>
       </Collapse>
     </>
