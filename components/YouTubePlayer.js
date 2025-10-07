@@ -9,19 +9,21 @@ import {
   Link as UILink,
 } from "@nextui-org/react";
 
+import { theme } from '../utils/consts'
+
 export function YouTubePlayer({ videoID, title }) {
   return (
     <>
       <Spacer y={1} />
 
-      <Card bordered hoverable shadow css={{ mw: "360px" }}>
-        <Card.Header css={{ bg: "#222" }}>
+      <Card bordered hoverable shadow css={{ mw: theme.mw }}>
+        <Card.Header css={{ bg: theme.bg }}>
           <Col>
             <Text
               size={12}
               weight="bold"
               transform="uppercase"
-              color="#9E9E9E"
+              color={theme.altText}
               align="left"
             >
               Video más reciente en YouTube
@@ -37,8 +39,8 @@ export function YouTubePlayer({ videoID, title }) {
             frameBorder="0"
             allowFullScreen="false"
             scrolling="no"
-            height="200"
-            width="356"
+            height={theme.videoHeight}
+            width={theme.videoWidth}
           ></iframe>
         </Card.Body>
         <Divider />
@@ -53,7 +55,7 @@ export function YouTubePlayer({ videoID, title }) {
           }}
         >
           <Row justify="flex-end">
-            <Button flat auto rounded css={{ bg: "#111" }}>
+            <Button flat auto rounded css={{ bg: theme.altBg }}>
               <UILink href="//carlosazaustre.es/libros/aprendiendo-javascript">
                 <Text
                   color="primary"
