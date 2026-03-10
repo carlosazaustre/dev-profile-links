@@ -9,6 +9,8 @@ import {
   Text,
 } from "@nextui-org/react";
 
+import { theme } from '../utils/consts'
+
 export function CardInfo({
   title,
   subtitle,
@@ -25,7 +27,7 @@ export function CardInfo({
           bordered
           hoverable
           shadow
-          css={{ my: 15, mw: "360px", bg: "#222" }}
+          css={{ my: 15, mw: theme.mw, bg: theme.bg }}
         >
           <Card.Header>
             <Col>
@@ -33,12 +35,12 @@ export function CardInfo({
                 size={12}
                 weight="bold"
                 transform="uppercase"
-                color="#9E9E9E"
+                color={theme.altText}
                 align="left"
               >
                 {title}
               </Text>
-              <Text h3 align="left" color="white">
+              <Text h3 align="left" color={theme.defaultText}>
                 {subtitle}
               </Text>
             </Col>
@@ -64,10 +66,10 @@ export function CardInfo({
               }}
             >
               <Row justify="center">
-                <Text size="xs" color="white" align="left">
+                <Text size="xs" color={theme.defaultText} align="left">
                   {bottomText}
                 </Text>
-                <Button flat auto rounded css={{ bg: "#111" }}>
+                <Button flat auto rounded css={{ bg: theme.altBg }}>
                   <Text
                     color="primary"
                     size={12}

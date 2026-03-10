@@ -8,19 +8,21 @@ import {
   Link as UILink,
 } from "@nextui-org/react";
 
+import { theme } from '../utils/consts'
+
 export function Courses({ courses }) {
   return (
     <>
       <Spacer y={1} />
-      <Collapse.Group shadow css={{ mw: "350px", bg: "#222" }}>
-        <Text h3 color="white" css={{ py: 10 }}>
+      <Collapse.Group shadow css={{ mw: theme.mw, bg: theme.bg }}>
+        <Text h3 color={theme.defaultText} css={{ py: 10 }}>
           Aprende con mis cursos GRATIS
         </Text>
         {courses.map((course, index) => (
           <Collapse
             key={course.title}
             title={
-              <Text h4 color="white">
+              <Text h4 color={theme.defaultText}>
                 {course.title}
               </Text>
             }
@@ -36,7 +38,7 @@ export function Courses({ courses }) {
             }
           >
             <Col>
-              <Text color="white" align="left">
+              <Text color={theme.defaultText} align="left">
                 {course.summary}
               </Text>
               <Spacer y={1} />
